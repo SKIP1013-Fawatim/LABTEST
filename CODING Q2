@@ -1,0 +1,35 @@
+package labTest;
+import java.util.Scanner;
+public class Commision {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		
+		int hours;
+		double commission=0,sales,dailywages,totalwages;
+		
+		
+		System.out.print("Enter sales : RM");
+		sales = sc.nextDouble();
+		
+		System.out.print("Enter hours worked : ");
+		hours = sc.nextInt();
+		
+		if((sales>=150)&&(sales<=300))
+			commission = 0.5 * sales;
+		else if((sales>300)&&(sales<=500))
+			commission = 0.10 * sales;
+		else if(sales>500)
+			commission = 0.15 * sales;
+	
+		dailywages = hours*5.0;
+		totalwages = dailywages+commission;
+		
+		System.out.println();
+		System.out.printf("Commission : RM%.2f " , commission);
+		System.out.printf("%nDaily wages : RM%.2f " , totalwages);
+
+	}
+
+}
